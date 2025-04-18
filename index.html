@@ -5,13 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Website</title>
     <style>
-      div {
-        background-color: lightgray;
-      }
+      * {
+  box-sizing: border-box;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
     </style>
   </head>
   <body>
-    <div>
+    <div id="hero-section">
       <h1>Hello World</h1>
       <p>Explore my website</p>
     </div>
@@ -26,6 +66,28 @@
     <main>
       <h1>Github Actions</h1>
     </main>
+    <div>
+      <h2>Contact Me</h2>
+      <p>Tell me who you are and leave a message</p>
+      <div>
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" name="firstname" placeholder="Your name.." />
+          <label for="lname">Last Name</label>
+          <input type="text" name="lastname" placeholder="Your last name.." />
+          <label for="email">Email</label>
+          <input type="text" name="email" placeholder="Your email address.." />
+          </select>
+          <label for="subject">Subject</label>
+          <textarea
+            name="subject"
+            placeholder="Write something.."
+            style="height: 170px"
+          ></textarea>
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
     <footer>
       <p>&copy; 2025 My Website</p>
     </footer>
